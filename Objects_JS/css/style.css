@@ -1,4 +1,146 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto, Arial;
+}
+
+.item_one{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+    width: 700px;
+    height: auto;
+
+    border-radius: 4px;
+    border: 8px solid rgba(188, 156, 255, 0.8);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+label{
+    font-size: medium;
+    margin: 5px;
+}
+
+input{
+    display: block;
+    width: 200px;
+    height: 25px;
+    margin: 10px;
+
+    text-align: center;
+    font-size: 16px;
+}
+
+.conversion{
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
+    background: -o-linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
+    background: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+}
+
+button:active{
+    box-shadow: -5px -5px 6px 0 rgba(255,255,255, 0.2) inset, 5px 5px 6px 0 rgba(174,174,174, 0.7) inset;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+#total_item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.block_game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+    width: 700px;
+    height: auto;
+
+    border-radius: 4px;
+    border: 8px solid rgba(0, 168, 253, 0.5);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+.btn_game {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(#2cc2d3 0%, #5fd8f6 100%);
+    background: -o-linear-gradient(#2cc2d3 0%, #5fd8f6 100%);
+    background: linear-gradient(#2cc2d3 0%, #5fd8f6 100%);
+    border-radius: 22px;
+}
+
+.btn_panel {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+          
+    margin: 5px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(#65d3ba 0%, #5fd8f6 100%);
+    background: -o-linear-gradient(#65d3ba 0%, #5fd8f6 100%);
+    background: linear-gradient(#65d3ba 0%, #5fd8f6 100%);
+    border-radius: 22px;
+}
+
+.game_panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+

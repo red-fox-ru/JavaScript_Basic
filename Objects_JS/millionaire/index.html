@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Millionaire Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+    <h1>Кто хочет стать Миллионером?</h1>
+    <section class="row">
+        <article id="logo">
+            <img id="img_logo" src="img/hsm_logo.png" alt="">
+        </article>
+        <article class="table_score">
+           <div class="btn-help">
+               
+           </div>
+            <ol reversed>
+                <li id="step14">1 000 000</li>
+                <li id="step13">500 000</li>
+                <li id="step12">250 000</li>
+                <li id="step11">125 000</li>
+                <li id="step10">64 000</li>
+                <li id="step9">32 000</li>
+                <li id="step8">16 000</li>
+                <li id="step7">8 000</li>
+                <li id="step6">4 000</li>
+                <li id="step5">2 000</li>
+                <li id="step4">1 000</li>
+                <li id="step3">500</li>
+                <li id="step2">300</li>
+                <li id="step1">200</li>
+                <li id="step0" class="total">100</li>
+            </ol>
+        </article>
+    </section>
+    <section id="msg"></section>
+    <section class="contr_panel column">
+        <article id="question_answer">
+            Идёт загрузка . . . 
+        </article>
+        <article class="row">
+           <div class="column">
+            <button id="ans_0" onclick="clickAnswerA()">A:</button>
+            <button id="ans_1" onclick="clickAnswerB()">B:</button>
+            </div>
+            <div class="column">
+            <button id="ans_2" onclick="clickAnswerC()">C:</button>
+            <button id="ans_3" onclick="clickAnswerD()">D:</button>
+            </div>
+        </article>
+    </section>
+</main>
+<script type="text/javascript" src="js/questions_json.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
