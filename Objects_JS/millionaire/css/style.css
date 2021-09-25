@@ -152,11 +152,12 @@ button {
     font-weight: normal;
     font-size: 16px;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     text-indent: 1em;
     
-    width: 320px;
-    height: 40px;
+    min-width: 340px;
+    min-height: 40px;
+/*    height: 40px;*/
     border: none;
     outline: none;
     cursor: pointer;
