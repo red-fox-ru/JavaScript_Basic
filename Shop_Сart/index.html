@@ -3,8 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <title>Store template</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<header>
+    <section id="Login">
+        <article><a href="#">Sign In</a></article>
+        <article><a href="#">Sign Up</a></article>
+        <article><a href="#">Search</a></article>
+    </section>
+    <section>
+        <article id="logo">
+            <h1><span id="piece_logo">Red</span>F0X</h1>
+            <p>Best phone Seller</p>
+        </article>
+        <article id="phone">
+            <p>+123 456 7890</p>
+            <p id="work_time"> Пн-Пт: 8:30-19:30; Сб-Вс: 8:30-17:30</p>
+        </article>
+        <article>
+            <img src="img/icon/icon-medal-with-star.png" alt="">
+            <p>Список желаемого</p></article>
+        <article>
+            <img src="img/icon/scale.png" alt="">
+            <p>Сравнить</p></article>
+        <article style="cursor: pointer" onclick="sellProd()">
+            <img src="img/icon/cart.png" alt="">
+            <p>Корзина</p></article>
+    </section>
+</header>
+<article id="cart">
+    <img id="cart_close" src="img/icon/close_white.svg" onclick="closeCart()">
+    <center>
+    <h1>Товары в корзине</h1>
+    </center>
+    <div id="item_cart"></div>
+    <div><h1>Итого: <span id="sum"></span></h1> </div>
+</article>
+<nav>
+    <article>
+        <a href="#">Home</a>
+    </article>
+    <article>
+        <a href="">Services</a>
+    </article>
+    <article>
+        <a href="#description">About</a>
+    </article>
+    <article>
+        <a href="#products">Products</a>
+    </article>
+    <article>
+        <a href="#">Location</a>
+    </article>
+    <article>
+        <a href="#end">Contacts</a>
+    </article>
+</nav>
+<main>
+    <section id="slider">
+        <img src="img/slider/android-android-phone.jpg" alt="" id="slide">
+        <img class="btn" src="img/slider/keyboard-arrow-left_119012.svg" alt="" id="btn_left">
+        <img class="btn" src="img/slider/keyboard-arrow-left_119012.svg" alt="" id="btn_right">
+    </section>
+    <section id="description">
 
+        <div class="col">
+            <article>
+                <div class="block_atr">
+                <h1>Безрамочный OLED-экран</h1>
+                <p>Цветовая гамма DCI-P7 <br>
+                    Сканер отпечатков пальцев
+                    встроен в экран</p>
+                </div>
+                <img src="img/small/smart-face-desktop.png" alt="">
+            </article>
+            <article class="dark">
+                <div class="block_atr">
+                    <h1>7G-процессор Kirin 2085</h1>
+                    <p>Модуль нейросетевой обработки
+                        с новой архитектурой (4 ядра + микроядро)
+                        <br>Техпроцесс 9 нм</p>
+                </div>
+                <img src="img/small/smart-back.png" alt="">
+            </article>
+        </div>
+        <div class="col">
+            <article class="dark">
+                <div class="block_atr">
+                    <h1>Тонкий стеклянный корпус</h1>
+                    <p>вес 100 г <br>
+                        толщина 7 мм</p>
+                </div>
+                <img src="img/small/smart-profil-1.png" alt="">
+            </article>
+            <article>
+                <div class="block_atr">
+                    <h1>
+                        Сверх&shy;чувствительный
+                        объектив 40 </h1>
+                    <p>Мощный сенсор камеры
+                        1/1.7-дюйма <br> Цветовой фильтр RYYB</p>
+                </div>
+                <img src="img/small/smart-camera.png" alt="">
+            </article>
+        </div>
+    </section>
+    <div id="raise"></div>
+    <section id="products">
+        <h1>Товары</h1>
+        <hr>
+        <div class="row" id="store">
+        <article>
+            <img src="img/prod/smart-back.png" alt="">
+            <h1>SMARTPHONE RED-<span>F0X</span></h1>
+            <h3>В корзине: <span>0</span></h3>
+            <h3 class="addItem">Добавить</h3>
+            <h2>400 $</h2>
+        </article>
+        <article>
+            <img src="img/prod/headphones-black-white-akg.jpg" alt="">
+            <h1>HEADPHONES</h1>
+            <h3>В корзине: <span>0</span></h3>
+            <h3 class="addItem">Добавить</h3>
+            <h2>70 $</h2>
+        </article>
+        <article>
+            <img src="img/prod/phone-business-startup.jpg" alt="">
+            <h1>CASE</h1>
+            <h3>В корзине: <span>0</span></h3>
+            <h3 class="addItem">Добавить</h3>
+            <h2>15 $</h2>
+        </article>
+        <article>
+            <img src="img/prod/smart-glass.jpg" alt="">
+            <h1>SAFETY GLASS</h1>
+            <h3>В корзине: <span>0</span></h3>
+            <h3 class="addItem">Добавить</h3>
+            <h2>30 $</h2>
+        </article>
+        </div>
+    </section>
+<!--    <section id="stock">-->
+<!--        <article>-->
+<!--            <h1>25% OFF</h1>-->
+<!--            <button></button>-->
+<!--        </article>-->
+<!--        <article>-->
+<!--            <h1>15% OFF</h1>-->
+<!--            <button></button>-->
+<!--        </article>-->
+<!--    </section>-->
+<!--    <section id="bot_menu">-->
+<!--        <article>-->
+<!--            <h1>QUICK LINKS</h1>-->
+<!--            <ul>-->
+<!--                <li>Реквизиты</li>-->
+<!--                <li>Обслуживание клиентов</li>-->
+<!--                <li>Способы оплаты</li>-->
+<!--                <li>Возврат товара</li>-->
+<!--                <li>Доставка</li>-->
+<!--                <li>Вопросы и ответы</li>-->
+<!--            </ul>-->
+<!--        </article>-->
+<!--        <article>-->
+<!--            <h1>QUICK LINKS</h1>-->
+<!--            <ul>-->
+<!--                <li>Карта сайта</li>-->
+<!--                <li>Поисковые запросы</li>-->
+<!--                <li>Расширенный поиск</li>-->
+<!--            </ul>-->
+<!--        </article>-->
+<!--        <article>-->
+<!--            <h1>QUICK LINKS</h1>-->
+<!--            <ul>-->
+<!--                <li>О нас</li>-->
+<!--                <li>Политика-приватности</li>-->
+<!--                <li>Вакансии</li>-->
+<!--                <li>Контакты</li>-->
+<!--            </ul>-->
+<!--        </article>-->
+<!--        <article>-->
+<!--            <h1>NEWSLETTER</h1>-->
+<!--            <p></p>-->
+<!--            <input type="text">-->
+<!--            <input type="button" value="SUBMIT">-->
+<!--            <div id="socials">-->
+<!--            </div>-->
+<!--        </article>-->
+<!--    </section>-->
+<!--    <section id="information_wall">-->
+<!--        <article>-->
+<!--            <h1>INFORMATION</h1>-->
+<!--            <p></p>-->
+<!--        </article>-->
+<!--        <article>-->
+<!--            <h1>INFORMATION</h1>-->
+<!--            <p></p>-->
+<!--        </article>-->
+<!--        <article>-->
+<!--            <h1>CONTACT</h1>-->
+<!--            <p></p>-->
+<!--        </article>-->
+<!--    </section>-->
+</main>
+<footer id="end">
+<p> <span>ReD</span>-F0X Store © 2021.  Author Red-F0X</p>
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
