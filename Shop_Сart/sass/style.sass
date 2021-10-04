@@ -1,0 +1,324 @@
+// color
+
+$bgColor: #030303
+$fontColor: #ffffff
+$headColor: #212121
+$darkGrey: #1c1c1c
+$lightGrey: #303030
+$bgProduct: #282828
+$productColor: #363636
+$topFont: #ff3448
+$botColor: #9c1c28
+
+// mixin
+
+@mixin displayDef
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+
+@mixin slider
+  position: absolute
+  cursor: pointer
+  width: 35px
+  transition: 1s linear
+
+@mixin link($color, $hover, $active)
+  color: $color
+  text-decoration: none
+  transition: 1s linear
+
+  &:hover
+    color: $hover
+  &:active
+    color: $active
+
+
+body
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  margin: 0
+  padding: 0
+
+  font-family: Lato
+
+  //min-height: 4000px
+  color: $fontColor
+  background-color: $bgColor
+
+  overflow-y: scroll
+
+body::-webkit-scrollbar
+  width: 7px
+  background-color: $darkGrey
+
+body::-webkit-scrollbar-thumb
+  background-color: $lightGrey
+
+header
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  background-color: $headColor
+  width: 100%
+  height: 140px
+  margin: 0
+  padding: 0
+
+  section
+    border-top: 2px solid $lightGrey
+    height: 75px
+
+    article
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: center
+      margin: 2ch
+      font-size: 15px
+      font-weight: bold
+      text-align: center
+
+      img
+        margin: 0
+        width: 25px
+        height: auto
+
+      p
+        line-height: 0
+
+    #phone
+      align-items: flex-end
+      text-align: right
+
+a
+  @include link($fontColor, $topFont, $botColor)
+
+h1
+  font-size: 35px
+  -moz-hyphens: auto
+  -webkit-hyphens: auto
+  -ms-hyphens: auto
+
+nav
+  @include displayDef
+  height: 45px
+  font-weight: bold
+  font-size: 15px
+
+  article
+    margin: 20px
+
+main
+  width: 100%
+
+section
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+
+#logo
+
+  line-height: 0.2
+
+  h1
+    margin: 0
+    font-size: 35px
+
+  p
+    text-align: center
+
+#Login
+  justify-content: flex-end
+  width: 100%
+  height: 55px
+  margin-top: 0
+  border-top: none
+  border-right: none
+
+  a
+    @include link($topFont, $fontColor, $botColor)
+
+  article
+    margin: 15px
+
+article#phone
+  line-height: 0
+
+#work_time
+  color: #999999
+
+#piece_logo
+  color: $topFont
+
+#slider
+  overflow: hidden
+  height: 680px
+
+  img
+    width: 100%
+    object-fit: cover
+  //animation: fade 1s linear forwards
+
+  #btn_left
+    left: 2em
+    transform: none
+    @include slider
+
+  #btn_right
+    transform: rotate(180deg)
+    cursor: pointer
+    right: 2em
+    @include slider
+
+.col
+  flex-direction: column
+
+.row
+  @include displayDef
+
+#description
+  align-items: stretch
+
+  article
+    @include displayDef
+    justify-content: space-around
+    background-color: $lightGrey
+    width: 49.7vmax
+    height: 400px
+
+  .dark
+    background-color: $darkGrey
+
+  img
+    width: 350px
+    cursor: pointer
+
+.block_atr
+  margin-left: 45px
+
+#raise
+  @include displayDef
+  position: fixed
+  width: 720px
+  top: 15%
+  left: 25%
+  animation: fade 2s none linear
+
+  img
+    width: 720px
+
+  #close
+    position: absolute
+    width: 50px
+    top: 0px
+    right: 0px
+    cursor: pointer
+
+#products
+  background-color: $bgProduct
+  display: flex
+  flex-direction: column
+  height: 700px
+
+  h1
+    line-height: 0
+    margin-top: 80px
+    margin-bottom: 20px
+
+  hr
+    width: 80px
+    height: 6px
+    border: none
+    background-color: $botColor
+
+  .row
+    flex-grow: 2
+    justify-content: space-around
+
+  article
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    background-color: $productColor
+    width: 250px
+    height: 400px
+    margin: 20px
+    cursor: pointer
+    transition: 1s ease
+    &:hover
+      background-color: rgba(156, 28, 40, 0.3)
+      width: 260px
+      height: 410px
+
+    h1
+      font-size: 17px
+      color: $topFont
+      margin-bottom: 0
+
+      span
+        color: $fontColor
+  img
+    width: 180px
+
+.addItem
+  color: $botColor
+
+footer
+  p
+    span
+      color: $topFont
+
+#cart
+  display: none
+  position: fixed
+  flex-direction: column
+  justifyContent: center
+  alignItems: center
+  background-color: $bgProduct
+  color: $fontColor
+  width: 720px
+  height: 480px
+  top: 15%
+  left: 25%
+
+  h1
+    margin-left: 10px
+    color: $topFont
+
+#item_cart
+  height: 300px
+  h3
+    display: flex
+    flex-direction: row
+    justify-content: center
+    margin-left: 30px
+    left: 30px
+    span
+      margin: 20px
+
+#sum
+  margin-left: 60px
+  color: $fontColor
+  font-size: 25px
+
+#cart_close
+  position: absolute
+  fill: #ffffff
+  width: 50px
+  right: 0px
+  cursor: pointer
+
+@keyframes fade
+  0%
+    opacity: 0
+  50%
+    opacity: 0.5
+  100%
+    opacity: 1
